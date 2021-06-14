@@ -1,57 +1,46 @@
 body {
-  animation-name: backgroundColorPalette;
-  animation-duration: 10s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  animation-timing-function: linear;
+  background-color: rgb(39, 2, 32);
+  background-size: cover;
+ }
+
+ main {
+  height: 30vh;
+  display: flex;
+  justify-content:top left;
+  align-items: left;
+  padding-left: 30px;
 }
-@keyframes backgroundColorPalette {
-  0% {
-    background: #ee55cd;
-  }
-  25% {
-    background: #75e6ee;
-  }
-  50% {
-    background: #b3f791;
-  }
-  75% {
-    background: #f1cf7f;
-  }
-  100% {
-    background: #ec927e;
-  }
+.text {
+  background: url(img/ocean.jpg);
+  background-size: contain;
+  background-position: top left;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 3rem;
+  font-weight: bold;
+  font-family: 'satisfy';
 }
 
-article {
-  width: 70%;
-  margin: 40px auto 0 auto;
-  padding: 20px;
-  position: relative;
-}
 
-h1 {
+/* h1 {
   font-size: 3.85em;
   margin: 0 0 .5em 0;
   font-family: 'Satisfy', cursive;
-  color:white;
+  color:#a64ee9;
 }
-
+ */
 .card-box{
-  display:flex;
+  display: flex;
+  flex-wrap: wrap;
   writing-mode: horizontal-tb;
    border-spacing: 0; 
    margin: 0;
-} 
+}
+ 
 
 :root {
-    --primary: #a64ee9;
-    --secondary: #7bec24;
-  }
-  
-  * {
-    margin: 0;
-    padding: 0;
+    --primary: rgb(57, 215, 236);
+    --secondary: rgb(42, 224, 185);
   }
   
   body {
@@ -63,8 +52,8 @@ h1 {
 
   .card {
     margin-top:200px;
-    margin-left: 200px;
-    width: 200px;
+    margin-left:170px;
+    width: 220px;
     height: 300px;
     perspective: 500px;
   }
@@ -76,7 +65,6 @@ h1 {
     transform-style: preserve-3d;
     cursor: pointer;
     position: relative;
-    
   }
   
   .card__inner.is-flipped {
@@ -105,7 +93,7 @@ h1 {
   
   .card__face--front h2 {
     color: #FFF;
-    font-size: 72px;
+    font-size: 50px;
   }
   
   .card__face--back {
@@ -115,7 +103,7 @@ h1 {
   
   .card__content {
     width: 100%;
-    height: 100%;
+    height:100%;
   }
   
   .card__header {
@@ -125,7 +113,7 @@ h1 {
   
   .card__header:after {
     content: '';
-    display: block;
+    display: flex;
     position: absolute;
     top: 0;
     left: 0;
@@ -137,11 +125,11 @@ h1 {
   }
   
   .pp {
-    display: block;
+    display: flex;
     width: 82px;
     height: 82px;
     margin: 0 auto 30px;
-    border-radius: 50%;
+    border-radius: 50% 20% / 10% 40%;;
     background-color: #FFF;
     border: 5px solid #FFF;
     object-fit: cover;
@@ -156,7 +144,7 @@ h1 {
   }
   
   .card__body {
-    padding: 30px;
+    padding: 20px;
   }
   
   .card__body p {
@@ -204,7 +192,7 @@ h1 {
     transform: rotateY(180deg);
   }
   
-  .btn-grad {background-image: linear-gradient(to right, #fc37e2 0%, #51e5f0  51%, #fc37e2  100%)}
+  .btn-grad {background:url(https://media.giphy.com/media/3o6Ztb45EYezY9x9gQ/giphy.gif); }
          .btn-grad {
             margin: auto;
             padding:10px 35px;
@@ -215,7 +203,7 @@ h1 {
             color: white;            
             box-shadow: 0 0 20px #eee;
             border-radius: 20px;
-            display: block;
+            display: flex;
             cursor: pointer;
           }
 
@@ -225,4 +213,54 @@ h1 {
             text-decoration: none;
           }
 
+            span{
+              height: 30px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+            
+            .text1 {
+              background: url(https://media.giphy.com/media/3o6Ztb45EYezY9x9gQ/giphy.gif);
+              background-size: contain;
+              background-position: top left;
+              -webkit-background-clip: text;
+              color: transparent;
+              font-size:8rem;
+              font-weight: bold;
+              font-family: 'satisfy';
+            }
+
+.btn {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  float:right;
+}
+
          
+            
+          .btn-grad1, .btn-grad2 {
+            background-color: rgb(57, 215, 236); 
+            /* margin: auto; */
+            padding:8px 8px;
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            color: white;            
+            box-shadow: 0 0 20px rgb(12, 12, 12);
+            border-radius: 70px;
+            display: flex;
+            cursor: pointer;
+          }
+
+          .btn-grad1:hover, .btn-grad2:hover {
+            background-position: right; 
+            color: #fff;
+            text-decoration: none;      
+          }
+
+
+          
+          
