@@ -1,6 +1,7 @@
 body {
-  background-color: rgb(39, 2, 32);
+  background-color: black;
   background-size: cover;
+
  }
 
  main {
@@ -21,227 +22,35 @@ body {
   font-family: 'satisfy';
 }
 
-
-/* h1 {
-  font-size: 3.85em;
-  margin: 0 0 .5em 0;
-  font-family: 'Satisfy', cursive;
-  color:#a64ee9;
-}
- */
-.card-box{
-  display: flex;
-  flex-wrap: wrap;
-  writing-mode: horizontal-tb;
-   border-spacing: 0; 
-   margin: 0;
-}
- 
-
-:root {
-    --primary: rgb(57, 215, 236);
-    --secondary: rgb(42, 224, 185);
-  }
-  
-  body {
-    font-family:'Satisfy', cursive ;
-    width: 100%;
-    min-height: 100vh;
-    font-size:x-small;
-  }
-
-  .card {
-    margin-top:200px;
-    margin-left:170px;
-    width: 220px;
-    height: 300px;
-    perspective: 500px;
-  }
-  
-  .card__inner {
-    width: 100%;
-    height: 100%;
-    transition: transform 1s;
-    transform-style: preserve-3d;
-    cursor: pointer;
-    position: relative;
-  }
-  
-  .card__inner.is-flipped {
-    transform: rotateY(180deg);
-  }
-  
-  
-  .card__face {
-    background-image: linear-gradient(to bottom left, var(--primary), var(--secondary));  
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    overflow: hidden;
-    border-radius: 16px;
-    box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.2);
-  }
-  
-  .card__face--front{
-    background-image: linear-gradient(to bottom right, var(--primary), var(--secondary));
-    display: flex;
-    align-items: center;
-    justify-content:center;
-  }
-  
-  .card__face--front h2 {
-    color: #FFF;
-    font-size: 50px;
-  }
-  
-  .card__face--back {
-    background-color: var(--light);
-    transform: rotateY(180deg);
-  }
-  
-  .card__content {
-    width: 100%;
-    height:100%;
-  }
-  
-  .card__header {
-    position: relative;
-    padding: 30px 30px 40px;
-  }
-  
-  .card__header:after {
-    content: '';
-    display: flex;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: linear-gradient(to bottom left, var(--primary) 10%, var(--secondary) 115%);
-    z-index: -1;
-    border-radius: 0px 0px 50% 0px;
-  }
-  
-  .pp {
-    display: flex;
-    width: 82px;
-    height: 82px;
-    margin: 0 auto 30px;
-    border-radius: 50% 20% / 10% 40%;;
-    background-color: #FFF;
-    border: 5px solid #FFF;
-    object-fit: cover;
-  } 
-   
-  .card__header h2 {
-    color: #FFF;
-    font-size: 25px;
-    font-weight: 900;
-    text-transform: uppercase;
-    text-align: center;
-  }
-  
-  .card__body {
-    padding: 20px;
-  }
-  
-  .card__body p {
-    color: var(--dark);
-    font-size: 18px;
-    line-height: 1.4;
-  }
-
-  .card__inner-2 {
-    width: 100%;
-    height: 100%;
-    transition: transform 1s;
-    transform-style: preserve-3d;
-    cursor: pointer;
-    position: relative;
-  }
-  
-  .card__inner-2.is-flipped {
-    transform: rotateY(180deg);
-  }
-  
-  .card__inner-3 {
-    width: 100%;
-    height: 100%;
-    transition: transform 1s;
-    transform-style: preserve-3d;
-    cursor: pointer;
-    position: relative;
-  }
-  
-  .card__inner-3.is-flipped {
-    transform: rotateY(180deg);
-  }
-
-  .card__inner-4 {
-    width: 100%;
-    height: 100%;
-    transition: transform 1s;
-    transform-style: preserve-3d;
-    cursor: pointer;
-    position: relative;
-  }
-  
-  .card__inner-4.is-flipped {
-    transform: rotateY(180deg);
-  }
-  
-  .btn-grad {background:url(https://media.giphy.com/media/3o6Ztb45EYezY9x9gQ/giphy.gif); }
-         .btn-grad {
-            margin: auto;
-            padding:10px 35px;
-            text-align: center;
-            text-transform: uppercase;
-            transition: 0.5s;
-            background-size: 200% auto;
-            color: white;            
-            box-shadow: 0 0 20px #eee;
-            border-radius: 20px;
-            display: flex;
-            cursor: pointer;
-          }
-
-          .btn-grad:hover {
-            background-position:  center; 
-            color: #fff;
-            text-decoration: none;
-          }
-
-            span{
-              height: 30px;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-            }
+  span{
+         height: 30px;
+         display: flex;
+         justify-content: center;
+         align-items: center;     
+       }
             
-            .text1 {
-              background: url(https://media.giphy.com/media/3o6Ztb45EYezY9x9gQ/giphy.gif);
-              background-size: contain;
-              background-position: top left;
-              -webkit-background-clip: text;
-              color: transparent;
-              font-size:8rem;
-              font-weight: bold;
-              font-family: 'satisfy';
-            }
-
+.text1 {
+        background: url(img/care.gif);
+        background-size: contain;
+        background-position: top left;
+        -webkit-background-clip: text;
+         color: transparent;
+         font-size:7rem;
+         font-weight:bolder;
+         font-family: 'satisfy';
+           }
+ 
 .btn {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  float:right;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        float:right;
 }
 
          
             
           .btn-grad1, .btn-grad2 {
-            background-color: rgb(57, 215, 236); 
+            background: url(img/ocean.jpg); 
             /* margin: auto; */
             padding:8px 8px;
             text-align: center;
@@ -261,6 +70,8 @@ body {
             text-decoration: none;      
           }
 
-
           
+          
+          
+         
           
