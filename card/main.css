@@ -59,7 +59,7 @@ body {
 .screen__background__shape4 {
 	height: 400px;
 	width: 200px;
-	background: #70e0c8;	
+	background: #706AF3;	
 	top: 420px;
 	right: 50px;	
 	border-radius: 60px;
@@ -74,7 +74,7 @@ main {
   padding-left: 30px;
 }
 .text {
-  background:  url(img/fla.jpg);
+  background-color: #f9f9fd ;
   background-size: contain;
   background-position: top left;
   -webkit-background-clip: text;
@@ -96,7 +96,7 @@ main, span#text{
        }
             
 .text1 {
-        background: url(img/care.gif);
+        background:#706AF3 ;
         background-size: contain;
         background-position: top left;
         -webkit-background-clip: text;
@@ -113,25 +113,25 @@ main, span#text{
             float:right;
           }
     
-              .btn-grad2 {
-                background: url(img/violet.jpg); 
+              .btn-grad {
+                background: #fbfbfd; 
                 /* margin: auto; */
                 padding:8px 8px;
                 text-align: center;
                 text-transform: uppercase;
                 transition: 0.5s;
                 background-size: 200% auto;
-                color: white;            
+                color: #706AF3;            
                 box-shadow: 0 0 20px rgb(12, 12, 12);
                 border-radius: 70px;
                 display: flex;
                 cursor: pointer;
               }
     
-              .btn-grad2:hover {
+              .btn-grad:hover {
                 background-position: right; 
-                color: #fff;
-                text-decoration: none;      
+                color: #706AF3;
+                text-decoration:double;      
               }
     
               footer{
@@ -141,56 +141,123 @@ main, span#text{
                 padding-top:50px;
                 height:50px;
               }
-
-             @import 'https://fonts.googleapis.com/css?family=Lily+Script+One';
-                  body {
-                    
-                    font-family: 'Lily Script One';
-                  }
-
-                  .card {
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    width: 300px;
-                    height: 300px;
-                    margin: -150px;
-                    float: left;
-                    perspective: 500px;
-                  }
-
-                  .content {
-                    position: absolute;
-                    width: 100%;
-                    height: 100%;
-                    box-shadow: 0 0 15px rgba(0,0,0,0.1);
-
-                    transition: transform 1s;
-                    transform-style: preserve-3d;
-                  }
-
-                  .card:hover .content {
-                    transform: rotateY( 180deg ) ;
-                    transition: transform 0.5s;
-                  }
-
-                  .front,
-                  .back {
-                    position: absolute;
-                    height: 100%;
-                    width: 100%;
-                    background: white;
-                    line-height: 300px;
-                    color: #03446A;
-                    text-align: center;
-                    font-size: 60px;
-                    border-radius: 5px;
-                    backface-visibility: hidden;
-                  }
-
-                  .back {
-                    background: #03446A;
-                    color: white;
-                    transform: rotateY( 180deg );
-                  }
-                                
+              
+              
+              
+              .content{
+                height: 400px;
+                width: 700px;
+                position: absolute;
+                top: 80%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                display: block;
+                color: white;
+              -webkit-box-shadow: 10px 10px 60px 10px rgba(0,0,0,0.1);
+              -moz-box-shadow: 10px 10px 60px 10px rgba(0,0,0,0.1);
+              box-shadow: 10px 10px 60px 10px rgba(0,0,0,0.1);
+              }
+              
+              body{
+                font-family: 'satisfy';
+                text-align:center;
+                vertical-align:middle;
+                font-size: 30px; 
+                font-weight: bolder; 
+                cursor:pointer;
+              }
+              
+              .x1{
+                width:200px;
+                height:150px;
+                background-color:#8c36dd;
+                left: 0;
+                top: 0;
+                position: relative;
+                line-height:150px;
+              }
+              
+              .x2{
+                position:absolute;
+                height:250px;
+                width:300px;
+                left:400px;
+                top:0px;
+                background-color:#cf45f1;
+                line-height:250px;
+                color:#FFFFFF;
+              }
+              
+              .x3{
+                position:absolute;
+                height:250px;
+                width:200px;
+                left:0px;
+                top:150px;
+                background:url(img/photo.jpg);
+                line-height:250px;
+                background-size: contain;
+                background-size: cover;
+                background-position: center;
+              }
+              
+              .x4{
+                position:absolute;
+                height:150px;
+                width:500px;
+                left:200px;
+                top:250px;
+                background-color:white;
+                line-height:150px;
+                color:#8593E6;
+              }
+              
+              .x5{
+                position:absolute;
+                height:250px;
+                width:200px;
+                left:200px;
+                top:0px;
+                background-color:#5fd0e4;
+                line-height:250px;
+              }
+              
+              .block{
+                -webkit-animation:scaledown 1s linear;
+                -moz-animation:scaledown 1s linear;
+                animation:scaledown 0.1s linear;
+                transform-origin:50% 50%;
+                animation-fill-mode: forwards;
+              }
+              
+              .block:hover{
+                 z-index:100;
+                -webkit-animation:scale 1s linear;
+                -moz-animation:scale 1s linear;
+                animation:scale 0.1s linear;
+                transform-origin:50% 50%;
+                animation-fill-mode: forwards;
+              }
+              
+              
+              
+              @keyframes scale{
+                0%{
+                  transform:scale(1.0);
+                }
+                100%{
+                  transform:scale(1.1);
+                  -webkit-box-shadow: 10px 10px 60px 10px rgba(0,0,0,0.1);
+              -moz-box-shadow: 10px 10px 60px 10px rgba(0,0,0,0.1);
+              box-shadow: 10px 10px 60px 10px rgba(0,0,0,0.1);
+                }
+              }
+              
+              @keyframes scaledown{
+                0%{
+                  transform:scale(1.1);
+                }
+                 100%{
+                  transform:scale(1.0);
+                }
+              }
