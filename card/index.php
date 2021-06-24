@@ -1,3 +1,16 @@
+<?php
+session_start();
+
+if($_SESSION['username']){
+    echo $_SESSION['success'];
+    require_once('../db-connect.php');
+    $sql= 'SELECT * FROM `projects`';
+    $query= $db->prepare($sql);
+    $query->execute();
+    $result= $query->fetchAll(PDO::FETCH_ASSOC);
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -95,27 +108,49 @@
 				  <div id="circle2"></div>
 				  </div>
 				<div id="firstDot" style="text-align:center">
-	  <span class="dot"></span>
-	  <span class="dot"></span>
-	  <span class="dot"></span>
-	  <span class="dot"></span>
-	</div>
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span class="dot"></span>
+				</div>
 		
-			  <div id="all-contenedores">   
-				
+			<div id="all-contenedores">   
+			<?php
+				foreach ($result as $project) {
+			?>
 			  <div id="contenedor1" class="project-tile">
 			  <div id="image_1" class="container-fadeOverlay">
-				<a title="Hero-Header" href="https://soniar.promo-68.codeur.online/hero-header/pages"><img id="project_1" src="img/" class="miniatures" alt="Hero-Header"></a>
+			  	<a href="project-detail.php?id=<?=$project['project_id'] ?>"><img class="project_pictures" src="../assets/images/<?=$project['project_picture']?>" class="miniatures" alt="Hero-Header"></a>
+				<a href="project-detail.php?id=<?=$project['project_id'] ?>">
+				<div class="overlay-images">
+				  <div class="text-images"><?=$project['project_title']?></div>
+				</div>
+				</a>
+			  </div>
+				<div class="box-description" id="box1">
+				  <p><?=$project['project_context']?></p>
+				   <a href="project-detail.php?id=<?=$project['project_id'] ?>"><?=$project['project_title']?></a>
+				</div>
+			  </div>
+			<?php
+				}
+			?>
+			 <!-- 
+
+			  <div id="contenedor1" class="project-tile">
+			  <div id="image_1" class="container-fadeOverlay">
+				<a title="Hero-Header" href="https://soniar.promo-68.codeur.online/hero-header/"><img id="project_1" src="img/" class="miniatures" alt="Hero-Header"></a>
 				<a title="Hero-Header" href="https://soniar.promo-68.codeur.online/"><div class="overlay-images">
 				  <div class="text-images">Hero-Header</div>
 				</div></a>
 			  </div>
 				<div class="box-description" id="box1">
 				  <p>Landing page créée pour apprendre l'utilisation de différents logiciels comme A.Illustrator</p>
-				   <a href="https://soniar.promo-68.codeur.online/hero-header/pages"><p>Hero-Header</p></a>
+				   <a href="https://soniar.promo-68.codeur.online/hero-header"><p>Hero-Header</p></a>
+				   
 				</div>
 			  </div>
-			 
+
 			  <div id="contenedor2" class="project-tile">
 			  <div id="image_2" class="container-fadeOverlay">
 				<img id="project_2" src="img/" alt="beeweb" class="miniatures">
@@ -153,13 +188,12 @@
 				  <p>Projet sur la surdité créé en collaboration avec d'autres stagiaires d'AccessCodeSchool</p>
 				   <a href="https://"><p>a11e</p></a>
 				</div>
-			  </div>
+			  </div> -->
 		   
-			  </div>
+			</div>
 			</section>
 		  </div>
-			
-			
+				
 		   <div id="section4">
 			
 			  <section id="Contact">
@@ -168,9 +202,9 @@
 				  
 				  <div id="container-box">
 					   <form>   
-					<input name="name" type="text" class="feedback-input" placeholder="Name" />   
+					<input name="name" type="text" class="feedback-input" placeholder="Nom" />   
 					<input name="email" type="text" class="feedback-input" placeholder="Email" />
-					<textarea name="text" class="feedback-input" placeholder="Comment"></textarea>
+					<textarea name="text" class="feedback-input" placeholder="Message"></textarea>
 					<input type="submit" value="SUBMIT"/>
 				  </form>
 				  <div>

@@ -516,10 +516,18 @@ body{
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
 }
-#image_1{
+
+#image_1 {
    transform:translate(12em,3em);
   float:left;
 }
+
+.project_pictures{
+    transform:translate(-2em,-2em);
+  float:left;
+  width: 240px!important;
+}
+
 #project_1{
     transform:translate(-2em,-2em);
   float:left;
