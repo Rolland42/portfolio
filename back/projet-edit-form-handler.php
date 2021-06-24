@@ -54,7 +54,3 @@ if ($_SESSION['username']) {
 } else {
     echo "vous n'êtes pas identifié";
 }
-
-```
- : project-edit-fom-handler.php
-

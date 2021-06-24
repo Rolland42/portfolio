@@ -28,8 +28,9 @@ if ($_SESSION['username']) {
 </head>
 
 <body>
-    <form action="project-edit-form-handler.php" method="post">
 
+    <form action="projet-edit-form-handler.php" method="post">
+    <input type="hidden" name="project_id" value='<?= $result['project_id'] ?>'>
         <div>
             <label for="input_title">Titre</label>
             <input type="text" id="input_title" name="project_title" value="<?=$result['project_title']?>">
@@ -44,11 +45,11 @@ if ($_SESSION['username']) {
         </div>
         <div>
             <label for="input_context">Contexte</label>
-            <textarea name="project_context" id="input_context" cols="30" rows="10"><?=$result['project_context']?></textarea>
+            <textarea name="project_context" id="input_context" cols="30" rows="10" value="<?=$result['project_context']?>"><?=$result['project_context']?></textarea>
         </div>
         <div>
             <label for="input_specs">Spécifications fonctionnelles</label>
-            <textarea name="project_specs" id="input_specs" cols="30" rows="10"><?=$result['project_specs']?></textarea>
+            <textarea name="project_specs" id="input_specs" cols="30" rows="10" value="<?=$result['project_specs']?>"><?=$result['project_specs']?></textarea>
         </div>
         <div>
             <label for="input_githublink">Lien GitHub</label>
@@ -64,7 +65,27 @@ if ($_SESSION['username']) {
 
 
     </form>
-    <a href="project-details.php?id=<?= $result['project_id'] ?>">retour</a>
+
+    <br>
+    <br>
+    <br>
+
+
+    <form action="edit-picture-handler.php" method="post" enctype="multipart/form-data">
+
+<div>
+    <label for="input_picture">Aperçu</label>
+    <input type="file" id="input_picture" name="project_picture">
+    <input type="hidden" name="project_id" value='<?= $result['project_id'] ?>'>
+</div>
+
+<div>
+    <input type="submit">
+</div>
+
+</form>
+
+    <a href="project-detail.php?id=<?= $result['project_id'] ?>">retour</a>
 </body>
 
 </html>

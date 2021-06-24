@@ -1,14 +1,10 @@
 <?php
-session_start();
-
-if($_SESSION['username']){
-    echo $_SESSION['success'];
     require_once('../db-connect.php');
     $sql= 'SELECT * FROM `projects`';
     $query= $db->prepare($sql);
     $query->execute();
     $result= $query->fetchAll(PDO::FETCH_ASSOC);
-}
+
 ?>
 
 <!DOCTYPE html>
@@ -99,7 +95,7 @@ if($_SESSION['username']){
 			  </section>
 			</div>
 			
-		  <div id="section_3">
+		<div id="section_3">
 			<section id="projects">
 			  <h1 class="titles" id="portfolioTitle"><b>Portfolio</b></h1>
 			
@@ -114,85 +110,43 @@ if($_SESSION['username']){
 					<span class="dot"></span>
 				</div>
 		
-			<div id="all-contenedores">   
-			<?php
-				foreach ($result as $project) {
-			?>
-			  <div id="contenedor1" class="project-tile">
-			  <div id="image_1" class="container-fadeOverlay">
-			  	<a href="project-detail.php?id=<?=$project['project_id'] ?>"><img class="project_pictures" src="../assets/images/<?=$project['project_picture']?>" class="miniatures" alt="Hero-Header"></a>
-				<a href="project-detail.php?id=<?=$project['project_id'] ?>">
-				<div class="overlay-images">
-				  <div class="text-images"><?=$project['project_title']?></div>
-				</div>
-				</a>
-			  </div>
-				<div class="box-description" id="box1">
-				  <p><?=$project['project_context']?></p>
-				   <a href="project-detail.php?id=<?=$project['project_id'] ?>"><?=$project['project_title']?></a>
-				</div>
-			  </div>
-			<?php
-				}
-			?>
-			 <!-- 
+				<div id="all-contenedores">   
+					<?php
+						foreach ($result as $project) {
+					?>
+					<div class="contenedor project-tile">
 
-			  <div id="contenedor1" class="project-tile">
-			  <div id="image_1" class="container-fadeOverlay">
-				<a title="Hero-Header" href="https://soniar.promo-68.codeur.online/hero-header/"><img id="project_1" src="img/" class="miniatures" alt="Hero-Header"></a>
-				<a title="Hero-Header" href="https://soniar.promo-68.codeur.online/"><div class="overlay-images">
-				  <div class="text-images">Hero-Header</div>
-				</div></a>
-			  </div>
-				<div class="box-description" id="box1">
-				  <p>Landing page créée pour apprendre l'utilisation de différents logiciels comme A.Illustrator</p>
-				   <a href="https://soniar.promo-68.codeur.online/hero-header"><p>Hero-Header</p></a>
-				   
-				</div>
-			  </div>
+						<div class="image container-fadeOverlay">
+							
+							<a href="project-detail.php?id=<?=$project['project_id'] ?>">
+								<img class="project_picture" src="../assets/images/<?=$project['project_picture']?>" class="miniatures" alt="Hero-Header">
+							</a>
 
-			  <div id="contenedor2" class="project-tile">
-			  <div id="image_2" class="container-fadeOverlay">
-				<img id="project_2" src="img/" alt="beeweb" class="miniatures">
-				 <a title="beeweb" href="https:///soniar.promo-68.codeur.online/beeweb/pages/"><div class="overlay-images">
-				  <div class="text-images">beeweb</div>
-				   </div></a>
-			  </div>
-				  <div class="box-description" id="box2">
-				  <p>Projet sur les métiers du web créé en binôme avec Mme Ralandison T. chez OnlineFormapro/AccessCodeSchool</p>
-				   <a href="https://soniar.promo-68.codeur.online/beeweb/pages/"><p>beeweb</p></a>
-				</div>
-			  </div>
-			  
-			  <div id="contenedor3" class="project-tile">
-			  <div id="image_3" class="container-fadeOverlay">
-				<img id="project_3" src="img/" alt="Blindness" class="miniatures">
-				<a title="Blindness" href="https://"><div class="overlay-images">
-				  <div class="text-images">Blindness</div>
-				  </div></a>
-			  </div>
-				<div class="box-description" id="box3">
-				  <p>Projet sur la déficience visuelle créé en collaboration avec d'autres stagiaires chez AccessCodeSchool</p>
-				   <a href="https://"><p>Blindness</p></a>
-				</div>
-			  </div>
+							<a href="project-detail.php?id=<?=$project['project_id'] ?>">
+
+								<div class="overlay-images">
+									<div class="text-images"><?=$project['project_title']?></div>
+								</div>
+
+							</a>
+
+						</div>
+
+						<div class="box box-description">
+						<p><?=$project['project_context']?></p>
+						<a href="project-detail.php?id=<?=$project['project_id'] ?>"><?=$project['project_title']?></a>
+						</div>
+
+					</div>
+
+					<?php
+						}
+					?>
+					
 				
-				<div id="contenedor4" class="project-tile">
-			  <div id="image_4" class="container-fadeOverlay">
-				<img id="project_4" src="img/" alt="a11e" class="miniatures">
-				<a title="a11e" href="https://"><div class="overlay-images">
-				  <div class="text-images">a11e</div>
-				  </div></a>
-			  </div>
-				   <div class="box-description" id="box3">
-				  <p>Projet sur la surdité créé en collaboration avec d'autres stagiaires d'AccessCodeSchool</p>
-				   <a href="https://"><p>a11e</p></a>
 				</div>
-			  </div> -->
-		   
-			</div>
 			</section>
-		  </div>
+		</div>
 				
 		   <div id="section4">
 			

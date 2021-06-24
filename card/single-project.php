@@ -1,7 +1,5 @@
 <?php
-session_start();
 
-if ($_SESSION['username']) {
     if (isset($_GET['id']) && !empty($_GET['id'])) {
         require_once('../db-connect.php');
         $id = strip_tags($_GET['id']);
@@ -10,19 +8,14 @@ if ($_SESSION['username']) {
         $query->bindValue(':id', $id, PDO::PARAM_STR);
         $query->execute();
         $result = $query->fetch();
-        //var_dump($result);
-
-
     } else {
         echo 'id manquant';
     }
-} else {
-    echo 'identifiez-vous';
-}
+
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -37,12 +30,6 @@ if ($_SESSION['username']) {
         
         
 <br>
-        <a href="project-edit.php?id=<?=$result['project_id'] ?>">modifier « <?=$result['project_title']?> »</a>
-    <br>
-
-        <a href="project-delete.php?id=<?=$result['project_id'] ?>">supprimer « <?=$result['project_title']?> »</a>
-        
-    <br>
-        <a href="home.php"><button>Retour</button></a>
+    <a href="index.php"><button>Retour</button></a>
 </body>
 </html>
