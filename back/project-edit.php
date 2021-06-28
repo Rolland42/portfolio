@@ -85,7 +85,7 @@ if ($_SESSION['username']) {
 
 </form>
 
-    <a href="project-detail.php?id=<?= $result['project_id'] ?>">retour</a>
+    <a href="project-detail.php?project_id=<?= $result['project_id'] ?>">retour</a>
 </body>
 
 </html>

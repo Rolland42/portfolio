@@ -89,9 +89,10 @@
 				<div class="blockquote">
 			<h1 id="quote">Je me nomme Sonia.<span> Je suis actuellement en formation professionelle chez OnlineFormapro pour me reconvertir dans le domaine du Web Design. </span> Je me passionne pour divers centres d'intérêts, tels que le web, le dessin, la création, l'écriture, l'art, la photographie. </span></h1>
 		</div>
-				<div>
+				 <div>
 				  <img id="image-profil" src="img/photo.jpg">        
-				</div>
+				</div> 
+				
 			  </section>
 			</div>
 			

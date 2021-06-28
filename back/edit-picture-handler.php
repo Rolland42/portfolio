@@ -2,7 +2,7 @@
 session_start();
 
 if ($_SESSION['username']) {
-
+    $id = strip_tags($_POST['project_id']);
 
     if ($_FILES) {
 
