@@ -19,12 +19,12 @@
 <body>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<div id="container">	
+
 
 <?php
 	foreach ($result as $project) {
 ?>
-	
+	<div id="container">	
     <div class="product-details">
             
         <h1><?=$project['project_title'];?></h1>

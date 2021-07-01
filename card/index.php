@@ -14,6 +14,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Portfolio de Sonia</title>
 	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="cards.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	
 </head>
 <body>
@@ -54,14 +56,15 @@
 			 <h4 class="wordCarousel">
 			   <div id="wordAnimation"> 
 			   <ul class="switchWord"> 
-				
-					<li class="word-li" id="designer">
+			       <li class="word-li" id="designer">
 					  Designer</li>
+					<li class="word-li" id="photographe">
+					  Photographier</li>
 					<li class="word-li" id="artist">
-					  Créatrice</li> 
+					  Créer</li> 
 					<li class="word-li" id="coder">
 					  Programmer</li>
-					
+					  
 				</ul>
 				</div>
 			 </h4>
@@ -87,10 +90,10 @@
 	  <span class="dot"></span>
 	</div>
 				<div class="blockquote">
-			<h1 id="quote">Je me nomme Sonia.<span> Je suis actuellement en formation professionelle chez OnlineFormapro pour me reconvertir dans le domaine du Web Design. </span> Je me passionne pour divers centres d'intérêts, tels que le web, le dessin, la création, l'écriture, l'art, la photographie. </span></h1>
+			<h1 id="quote">Je m'appelle Sonia,<span> j'apprends le métier de Web Designer en me formant à la conception et au développement de sites et d'application Web à l'Access Code School de Dijon. </span> Je me passionne pour le <span class='italic-font'>graphic design</span> , le <span class='italic-font'>web</span>, le dessin, la création, l'écriture, l'art, la photographie. </span></h1>
 		</div>
 				 <div>
-				  <img id="image-profil" src="img/photo.jpg">        
+				  <img id="image-profil" src="img/photo.gif">        
 				</div> 
 				
 			  </section>
@@ -111,9 +114,59 @@
 					<span class="dot"></span>
 				</div>
 		
+				<?php
+	foreach ($result as $project) {
+?>
+	<div id="container">	
+    <div class="product-details">
+            
+        <h1><?=$project['project_title'];?></h1>
+            
+                <p class="information"><?=$project['project_context']?></p>
+
+            
+            
+        <div class="control">
+
+        <a href="single-project.php?id=<?=$project['project_id'] ?>">
+            <button class="btn">
+                <span class="project-link">Voir le projet</span>
+            <span class="link-animation"><?=$project['project_title'];?></span>
+            <span class="link-icon"><i class="fa fa-link"></i></span>
+            </button>
+        </a>
+        </div>
+                
+    </div>
+	
+    <div class="project-image">
+        
+        <img  src="../assets/images/<?=$project['project_picture']?>"  alt="">
+        
+
+        <div class="info">
+            <h2>Technologies</h2>
+            <ul>
+                <li>
+                <?=$project['project_specs'] ?>
+                </li>
+                
+    </ul>
+        </div>
+        
+    </div>
+
+</div>
+
+
+<?php
+    }
+?>
+
+
 				<div id="all-contenedores">   
-					<?php
-						foreach ($result as $project) {
+					<!-- <?php
+						/* foreach ($result as $project) { */
 					?>
 					<div class="contenedor project-tile">
 
@@ -141,8 +194,11 @@
 					</div>
 
 					<?php
-						}
-					?>
+						/* } */
+					?> -->
+					
+					<!-- ----- CARDS PROJECTS ----- -->
+
 					
 				
 				</div>
@@ -160,7 +216,7 @@
 					<input name="name" type="text" class="feedback-input" placeholder="Nom" />   
 					<input name="email" type="text" class="feedback-input" placeholder="Email" />
 					<textarea name="text" class="feedback-input" placeholder="Message"></textarea>
-					<input type="submit" value="SUBMIT"/>
+					<input type="submit" value="Envoyer"/>
 				  </form>
 				  <div>
 				  <p id="textContact">s.rolland@codeur.online</p>

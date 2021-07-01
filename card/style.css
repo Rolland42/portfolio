@@ -22,9 +22,17 @@
   box-sizing: border-box;
 }
 
+html {
+	scroll-behavior: smooth;
+  }
+
 body{
   background-color: #090909;
   color:white; 
+}
+
+.italic-font{
+  font-style: italic;
 }
 #portfolio{
   text-align:center;
@@ -194,7 +202,7 @@ body{
   54%,
   56%,
   100% {
-  text-shadow: 0 0 5px #bc0fdf, 0 0 15px #ffa500, 0 0 20px #bc0fdf, 0 0 40px #ffa500, 0 0 60px #bc0fdf, 0 0 10px #ff8d00, 0 0 98px #bc0fdf;
+  text-shadow: 0 0 5px #bc0fdf, 0 0 15px #e4d443, 0 0 20px #bc0fdf, 0 0 40px #e4d443, 0 0 60px #bc0fdf, 0 0 10px #e4d443, 0 0 98px #bc0fdf;
     color: #fff6a9; /**********/
   }
 }
@@ -244,7 +252,10 @@ body{
     99.99% { margin-top: 0px; }
     100% { margin-top: -360px; }
 }
-
+#photographe{
+  font-family: 'bahaus', cursive;
+  font-size: calc(1em + 1vw);
+}
 #coder{
  font-family: 'Audiowide', cursive;
  font-size: calc(1em + 1vw); 
@@ -292,7 +303,7 @@ body{
   transform:translate(0em,0em);
 }
 .dot {
-  float:center;
+  float: center;
   height: 0.5em;
   width: 0.5em;
   background-color: #bc0fdf ;
@@ -312,7 +323,7 @@ body{
   z-index:1;
 }
 #circles{
-  width:15em;
+  width:25em;
   transform:translate(47em,-4em);
 }
 #circle {
@@ -356,7 +367,7 @@ body{
 
 .blockquote {/**********/
 	position: fixed;
-  bottom:10em;
+  bottom:15em;
 	font-family: 'Antic Slab', serif;
 	max-width: 620px;
 	margin: 80px auto;
@@ -429,7 +440,7 @@ body{
   position:fixed;
   display: block;
   width:25em;
-  border-radius: 10px 100px / 120px;
+  border-radius: 20px ;
   box-shadow: 0 0 8px 8px white inset;
   transform:translate(14em,-5em);
   z-index: 1;

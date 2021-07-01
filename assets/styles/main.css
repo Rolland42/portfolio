@@ -1,0 +1,24 @@
+body{
+    background-color: #090909;
+    color: white;
+}
+
+/**BAR COLOR**/
+/* Firefox */
+* {
+    scrollbar-width: auto;
+    scrollbar-color:  #bc0fdf black;
+  }
+  
+  /* Chrome/Edge/Safari */
+  *::-webkit-scrollbar {
+    width: auto;
+  }
+  *::-webkit-scrollbar-track {
+    background: black;
+  }
+  *::-webkit-scrollbar-thumb {
+    background-color:  #bc0fdf;
+    border-radius: 20px;
+    border: 3px solid black;
+  }
