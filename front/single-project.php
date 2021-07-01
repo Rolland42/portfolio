@@ -20,11 +20,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project</title>
+    <title><?=$result['project_title']?> </title>
 </head>
 <body>
         <h1><?=$result['project_title']?>  </h1>
-        <figure><img style="width:240px;" src="../assets/images/<?= $result['project_picture']; ?>"></figure>
+        <figure><img style="width:240px;" src="../assets/images/projects/<?= $result['project_picture']; ?>"></figure>
         <p><?=$result['project_context']?></p>
         <p><?=$result['project_specs']?></p>
         

@@ -31,7 +31,7 @@ if ($_SESSION['username']) {
 </head>
 <body>
         <h1><?=$result['project_title']?>  </h1>
-        <figure><img style="width:240px;" src="../assets/images/<?= $result['project_picture']; ?>"></figure>
+        <figure><img style="width:240px;" src="../assets/images/projects/<?= $result['project_picture']; ?>"></figure>
         <p><?=$result['project_context']?></p>
         <p><?=$result['project_specs']?></p>
         

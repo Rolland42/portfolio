@@ -1,24 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rouge+Script&display=swap');
+
+html {
+      scroll-behavior: smooth;
+    }
+
 body{
     background-color: #090909;
     color: white;
+    font-family: Raleway;
 }
 
-/**BAR COLOR**/
-/* Firefox */
-* {
-    scrollbar-width: auto;
-    scrollbar-color:  #bc0fdf black;
+#header__title{
+  height: 96vh;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.header__title--sonia{
+  font-family: 'Poiret One', cursive;
+}
+
+.header__title--webdesigner{
+  font-family: 'Rouge Script', cursive;
+  font-size: calc(15px + 12vh);
+  line-height: calc(20px + 20vh);
+  text-shadow: 0 0 5px #bc0fdf, 0 0 15px #bc0fdf, 0 0 20px #bc0fdf, 0 0 40px #bc0fdf, 0 0 60px #bc0fdf, 0 0 10px #bc0fdf, 0 0 98px #bc0fdf;
+  color: #bc0fdf;
+  animation: blink 5s infinite;
+  -webkit-animation: blink 5s infinite;
+}
+
+@-webkit-keyframes blink {
+  20%,
+  24%,
+  55% {
+    color: #111;
+    text-shadow: none;
   }
-  
-  /* Chrome/Edge/Safari */
-  *::-webkit-scrollbar {
-    width: auto;
+
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+  text-shadow: 0 0 5px #dc1ef6 , 0 0 15px #bc0fdf, 0 0 20px #cc00ff, 0 0 40px #bc0fdf, 0 0 60px #bc0fdf, 0 0 10px #bc0fdf, 0 0 98px #dc1ef6 ;
+    color: #bc0fdf;
   }
-  *::-webkit-scrollbar-track {
-    background: black;
+}
+
+@keyframes blink {
+  20%,
+  24%,
+  55% {
+    color: #111;
+    text-shadow: none;
   }
-  *::-webkit-scrollbar-thumb {
-    background-color:  #bc0fdf;
-    border-radius: 20px;
-    border: 3px solid black;
+
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+  text-shadow: 0 0 5px #bc0fdf, 0 0 15px #e4d443, 0 0 20px #bc0fdf, 0 0 40px #e4d443, 0 0 60px #bc0fdf, 0 0 10px #e4d443, 0 0 98px #bc0fdf;
+    color: #fff6a9; 
   }
+}
+
+#section__about{
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 96vh;
+}
+
+
+#section__about--circles{
+  display: flex;
+  width:24em;
+}
+
+#section__about--first-circle, #section__about--second-circle{
+  background:#bc0fdf ;
+  opacity:0.1;
+  border-radius: 50%;
+  width: 8em;
+  height: 8em;
+}
+
+#section__about--second-circle{
+  margin-left: -6em;
+}
+
+.section__about--a-propos{
+  font-family: 'Poiret One', cursive;
+  font-size: 2.6rem;;
+  color: #bc0fdf;
+  font-weight: bold;
+  margin-top: -2em;
+  margin-left: -3em;
+}
+
+.section__about--profile-picture{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section__about--profile-picture img{
+  width:24em;
+  border-radius: 24px ;
+  box-shadow: 0 0 8px 8px white inset;
+}
+
+.section__about--blockquote{
+  border: 4px solid #bc0fdf;
+  border-radius: 24px 24px 24px 24px;
+  padding: 48px;
+  position: relative;
+  font-size: 1.2rem;
+}
+
+.section__about--blockquote:after {
+	content: "";
+	position: absolute;
+	border: 4px solid #bc0fdf;
+	border-radius: 0 48px 0 0;
+	width: 60px;
+	height: 60px;
+	bottom: -60px;
+	left: 50px;
+	border-bottom: none;
+	border-left: none;
+	z-index: 3;
+}
