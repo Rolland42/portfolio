@@ -199,3 +199,31 @@ body {
 .back h2{
   font-family: 'Rouge Script';
 }
+
+/* CONTACT */
+
+.feedback-input {
+  color: white !important;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: transparent !important;
+  border: 2px solid #bc0fdf !important;
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  outline: 0;
+  width: 100% !important;
+}
+
+#submit-form-control{
+  background: #bc0fdf;
+  border: 2px solid #bc0fdf !important;
+}
+
+#section__contact--row{
+  width: 100%;
+}

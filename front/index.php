@@ -1,4 +1,5 @@
 <?php
+    session_start();
     require_once('../db-connect.php');
     $sql= 'SELECT * FROM `projects`';
     $query= $db->prepare($sql); $query->execute(); $result= $query->fetchAll(PDO::FETCH_ASSOC); 
@@ -44,6 +45,8 @@
                 </div>
             </nav>
             <div id="header__title">
+
+
                 <h1 class="header__title--sonia">Sonia ROLLAND</h1>
                 <h2 class="header__title--webdesigner">Web Designer</h2>
             </div>
@@ -107,12 +110,47 @@
             </div>
             <h2 class="section__contact--form mb-5">Contact</h2>
 
-            <div class="row mt-5">
+            <div id="section__contact--row" class="row mt-5 mb-5">
+                <div class="col-2"></div>
 
-                <form action="" method="post">
-                    ici, un formulaire
+                <div class="col-8">
+
+                <form action="form-handler.php" method="post">
+                    <div class="mb-3">
+                        <input type="text" class="feedback-input form-control" id="input-name" name="data-name" placeholder="Nom">
+                    </div>
+                    <div class="mb-3">
+                        <input type="email" class="feedback-input form-control" id="input-email" name="data-email" placeholder="Email">
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" class="feedback-input form-control" id="input-object" name="data-object" placeholder="Objet">
+                    </div>
+                    <div class="mb-1">
+                        <textarea name="data-message" class="feedback-input" id="textarea-email" cols="30" rows="10" placeholder="Message"></textarea>
+                    </div>
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-primary" class="form-control" id="submit-form-control" rows="3">Envoyer</button>
+                    </div>
                 </form>
 
+                </div>
+                <div class="col-2"></div>
+                <div class="row mt-5 mb-5">
+            <div class="col-12">
+                    <?php
+                        if (!empty($_SESSION['success'])) {
+                            echo '<div class="alert alert-success" role="alert">'.
+                            $_SESSION['success'].'</div>';
+                            $_SESSION['success'] = '' ;
+                        }
+                        if (!empty($_SESSION['error'])) {
+                            echo '<div class="alert alert-danger" role="alert">'.
+                            $_SESSION['error'].'</div>';
+                            $_SESSION['error'] = '' ;
+                        }
+                    ?>
+                </div>
+            </div>
             </div>
             </section>
 
