@@ -1,10 +1,10 @@
 .container-navbar a {
-    margin: 0px 10px;
+    margin: 0px 15px;
     padding: 10px 10px;
-    position: relative;
-    z-index: 0;
+    position: fixed;
+    z-index: 1;
     cursor: pointer;
-    
+    display: flex;
 }
 
 .barnav-border a:before, .barnav-border a:after {
@@ -36,19 +36,21 @@
 
 #navbar-ul { 
     text-align:center;
-    background: rgba(9, 9, 9, 0.7);
+    background: transparent;
     margin: 0;
     overflow: hidden;
     padding-top:1em;
     padding-bottom:1em;
     width:97.5em;
+    display: flex;
+   color:#bc0fdf;
 }
 
 .navbar-li{ 
     display:inline;
     text-align:center;
     overflow: hidden;
-    padding-right:2em;
+    padding-right:5em;
 }
 
 .navbar-a{
