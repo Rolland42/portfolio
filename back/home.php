@@ -2,7 +2,7 @@
 session_start();
 
 if($_SESSION['username']){
-    echo $_SESSION['success'];
+    //echo $_SESSION['success'];
     require_once('../db-connect.php');
     $sql= 'SELECT * FROM `projects`';
     $query= $db->prepare($sql);
@@ -21,15 +21,20 @@ if($_SESSION['username']){
     <title>Home</title>
 </head>
 <body>
-   <a href="add-form.php"><button>ajoutez un projet</button></a>
 
-   <?php
-    foreach ($result as $project) {
-        ?>
+<p class="projects-list">
+    <?php
+        foreach ($result as $project) {
+    ?>
         <a href="project-detail.php?id=<?=$project['project_id'] ?>"><?=$project['project_title']?></a>
-
+        <br>
     <?php
         }
     ?>
+</p>
+<p class="link">
+    <a href="add-form.php"><button>ajoutez un projet</button></a>
+</p>
+
 </body>
 </html>

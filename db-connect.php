@@ -1,6 +1,6 @@
 <?php
 $servername= 'localhost';
-$dbname= 'backoffice';
+$dbname= 'portfolio';
 $username= 'root';
 $password= '';
 try{

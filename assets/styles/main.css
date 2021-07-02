@@ -1,17 +1,48 @@
+/* FONTS */
+
 @import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rouge+Script&display=swap');
+
+
+/* MAIN */
+
+* {
+  box-sizing: border-box;
+  font-weight: normal;
+}
 
 html {
       scroll-behavior: smooth;
     }
 
-body{
+body {
     background-color: #090909;
     color: white;
     font-family: Raleway;
 }
 
-#header__title{
+.main__circles {
+  display: flex;
+  width:24em;
+}
+
+.main__first-circle, .main__second-circle {
+  background:#bc0fdf ;
+  opacity:0.1;
+  border-radius: 50%;
+  width: 8em;
+  height: 8em;
+}
+
+.main__second-circle {
+  margin-left: -6em;
+  margin-top:-1rem;
+}
+
+
+/* HEADER */
+
+#header__title {
   height: 96vh;
   display: flex; 
   justify-content: center;
@@ -19,11 +50,11 @@ body{
   flex-direction: column;
 }
 
-.header__title--sonia{
+.header__title--sonia {
   font-family: 'Poiret One', cursive;
 }
 
-.header__title--webdesigner{
+.header__title--webdesigner {
   font-family: 'Rouge Script', cursive;
   font-size: calc(15px + 12vh);
   line-height: calc(20px + 20vh);
@@ -34,74 +65,40 @@ body{
 }
 
 @-webkit-keyframes blink {
-  20%,
-  24%,
-  55% {
+  20%, 24%, 55% {
     color: #111;
     text-shadow: none;
   }
-
-  0%,
-  19%,
-  21%,
-  23%,
-  25%,
-  54%,
-  56%,
-  100% {
-  text-shadow: 0 0 5px #dc1ef6 , 0 0 15px #bc0fdf, 0 0 20px #cc00ff, 0 0 40px #bc0fdf, 0 0 60px #bc0fdf, 0 0 10px #bc0fdf, 0 0 98px #dc1ef6 ;
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    text-shadow: 0 0 5px #dc1ef6 , 0 0 15px #bc0fdf, 0 0 20px #cc00ff, 0 0 40px #bc0fdf, 0 0 60px #bc0fdf, 0 0 10px #bc0fdf, 0 0 98px #dc1ef6 ;
     color: #bc0fdf;
   }
 }
 
 @keyframes blink {
-  20%,
-  24%,
-  55% {
+  20%, 24%, 55% {
     color: #111;
     text-shadow: none;
   }
-
-  0%,
-  19%,
-  21%,
-  23%,
-  25%,
-  54%,
-  56%,
-  100% {
-  text-shadow: 0 0 5px #bc0fdf, 0 0 15px #e4d443, 0 0 20px #bc0fdf, 0 0 40px #e4d443, 0 0 60px #bc0fdf, 0 0 10px #e4d443, 0 0 98px #bc0fdf;
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    text-shadow: 0 0 5px #bc0fdf, 0 0 15px #e4d443, 0 0 20px #bc0fdf, 0 0 40px #e4d443, 0 0 60px #bc0fdf, 0 0 10px #e4d443, 0 0 98px #bc0fdf;
     color: #fff6a9; 
   }
 }
 
-#section__about{
+/* SECTIONS */
+
+#section__about, #section__projects, #section__contact {
   display: flex; 
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 96vh;
+  flex-wrap: wrap;
+  margin-top: 24vh;
 }
 
 
-#section__about--circles{
-  display: flex;
-  width:24em;
-}
-
-#section__about--first-circle, #section__about--second-circle{
-  background:#bc0fdf ;
-  opacity:0.1;
-  border-radius: 50%;
-  width: 8em;
-  height: 8em;
-}
-
-#section__about--second-circle{
-  margin-left: -6em;
-}
-
-.section__about--a-propos{
+.section__about--a-propos, .section__projects--projets, .section__contact--form {
   font-family: 'Poiret One', cursive;
   font-size: 2.6rem;;
   color: #bc0fdf;
@@ -110,24 +107,27 @@ body{
   margin-left: -3em;
 }
 
-.section__about--profile-picture{
+/* ABOUT */
+
+.section__about--profile-picture {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
-.section__about--profile-picture img{
+.section__about--profile-picture img {
   width:24em;
   border-radius: 24px ;
   box-shadow: 0 0 8px 8px white inset;
 }
 
-.section__about--blockquote{
+.section__about--blockquote {
   border: 4px solid #bc0fdf;
   border-radius: 24px 24px 24px 24px;
   padding: 48px;
   position: relative;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 
 .section__about--blockquote:after {
@@ -142,4 +142,60 @@ body{
 	border-bottom: none;
 	border-left: none;
 	z-index: 3;
+}
+
+/* PROJECTS */
+
+.flip {
+  position: relative;
+  display: inline-block;
+  margin-right: 2px;
+  margin-bottom: 1em;
+  width: 480px;
+}
+.flip > .front,
+.flip > .back {
+  display: block;
+  color: white;
+  width: inherit;
+  background-size: cover !important;
+  background-position: center !important;
+  height: 240px;
+  padding: 1em 2em;
+  background:#bc0fdf ;
+  border-radius: 16px;
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition-duration: 1.5s;
+  transition-property: transform, opacity;
+}
+
+.flip > .front {
+  transform: rotateY(0deg);
+}
+.flip > .back {
+  position: absolute;
+  opacity: 0;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  transform: rotateY(-180deg);
+}
+.flip:hover > .front {
+  transform: rotateY(180deg);
+}
+.flip:hover > .back {
+  opacity: 0.8;
+  transform: rotateY(0deg);
+}
+
+.flip > .front p,
+.flip > .back p {
+  font-size: 1rem;
+  line-height: 160%;
+  color: white;
+}
+
+.back h2{
+  font-family: 'Rouge Script';
 }

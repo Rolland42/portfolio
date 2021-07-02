@@ -40,7 +40,7 @@ if($_SESSION['username']){
                 }     
             }  else {     
         
-                $target_dir = "../assets/images/";
+                $target_dir = "../assets/images/projects/";
                 $target_file = $target_dir . basename($_FILES["project_picture"]["name"]);
                 $uploadOk = 1;
                 $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));

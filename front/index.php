@@ -34,10 +34,10 @@
                                 <a class="nav-link navbar-a" href="#section__about">À propos</a>
                             </li>
                             <li class="nav-item me-5 mt-2 navbar-li">
-                                <a class="nav-link navbar-a" href="#">Projets</a>
+                                <a class="nav-link navbar-a" href="#section__projects">Projets</a>
                             </li>
                             <li class="nav-item me-5 mt-2 navbar-li">
-                                <a class="nav-link navbar-a" href="#">Contact</a>
+                                <a class="nav-link navbar-a" href="#section__contact">Contact</a>
                             </li>
                         </ul>
                     </div>
@@ -49,11 +49,11 @@
             </div>
         </header>
         <section class="container" id="section__about">
-            <div id="section__about--circles">
-                    <div id="section__about--first-circle"></div>
-                    <div id="section__about--second-circle"></div>
-                </div>
-                <h2 class="section__about--a-propos mb-5">À propos</h2>
+            <div class="main__circles">
+                <div class="main__first-circle"></div>
+                <div class="main__second-circle"></div>
+            </div>
+            <h2 class="section__about--a-propos mb-5">À propos</h2>
 
             <div class="row mt-5">
                 <div class="col-md-6 col-sm-12">
@@ -62,17 +62,62 @@
                     </figure>
                 </div>
                 <div class="col-md-6 col-sm-12">
-                    <p class="section__about--blockquote">
-                    Je m'appelle Sonia, j'apprends le métier de Web Designer en me formant à la conception et au développement de sites et d'application Web à l'Access Code School de Dijon. Je me passionne pour le graphic design , le web, le dessin, la création, l'écriture, l'art, la photographie.
+                    <p class="section__about--blockquote mt-5">
+                    Je m'appelle Sonia, j'apprends le métier de <span class="fst-italic">Web Designer</span> en me formant à la conception et au développement de sites et d'application à l'Access Code School de Dijon. Je me passionne pour le <span class="fst-italic">graphic design</span>, la création, l'écriture, le dessin, l'art & la photographie.
                     </p>
                 </div>
             </div>
+        </section>
+        <section class="container" id="section__projects">
 
-            
+            <div class="main__circles">
+                <div class="main__first-circle"></div>
+                <div class="main__second-circle"></div>
+            </div>
+            <h2 class="section__projects--projets mb-5">Projets</h2>
 
+            <div class="row mt-5">
+
+            <?php foreach ($result as $project) { ?>
+
+                <div class="col-sm-12 col-md-6 mb-5">
+                    <a href="single-project.php?id=<?=$project['project_id'] ?>">
+                        <div class="flip">
+                            <div class="front" style="background-image: url(../assets/images/projects/<?=$project['project_picture']?>)">
+                            </div>
+                            <div class="back">
+                            <h2><?=$project['project_title']?></h2>
+                            <hr>
+                            <p><?=$project['project_context']?>.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+            <?php } ?>
+
+            </div>
         </section>
 
+        <section class="container" id="section__contact">
 
+            <div class="main__circles">
+                <div class="main__first-circle"></div>
+                <div class="main__second-circle"></div>
+            </div>
+            <h2 class="section__contact--form mb-5">Contact</h2>
+
+            <div class="row mt-5">
+
+                <form action="" method="post">
+                    ici, un formulaire
+                </form>
+
+            </div>
+            </section>
+
+
+        <script src="../assets/scripts/main.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     </body>
 </html>
